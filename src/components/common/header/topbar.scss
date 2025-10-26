@@ -1,0 +1,52 @@
+@use "../../../styles/mixins" as *;
+
+.topbar {
+  background-color: black;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: star;
+
+    .slogan {
+      width: 70%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 20px;
+      text-align: center;
+      letter-spacing: 1px;
+
+        .pi{
+            margin: 5px;
+            color: rgb(217, 11, 11);
+
+        }
+        .span {
+          color: rgb(211, 59, 59);
+          font-weight: bold;
+        }
+    }
+  }
+}
+
+button.navbar-toggler.collapsed {
+  border-color: red;
+  &:active {
+    border-color: red;
+  }
+  &:focus {
+    border-color: red;
+  }
+  &:hover {
+    border-color: red;
+  }
+  &before {
+    border-color: red;
+  }
+  
+
+}
