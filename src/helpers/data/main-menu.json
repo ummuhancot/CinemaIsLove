@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Home",
+    "link": "/",
+    "icon": "pi pi-home"
+  },
+  {
+    "title": "Movie",
+    "link": "/movie",
+    "icon": "pi pi-camera"
+  },
+  {
+    "title": "Cinema",
+    "link": "/cinema",
+    "icon": "pi pi-building-columns"
+  },
+  {
+    "title": "About",
+    "link": "/about",
+    "icon": "pi pi-info-circle"
+  },
+  {
+    "title":"Login",
+    "link":"/login",
+    "icon":"pi pi-sign-in"
+  }
+]

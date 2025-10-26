@@ -1,0 +1,44 @@
+.film-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: auto;
+  background-position: center;
+  background-attachment: fixed;
+
+  // Mobil ekranlar (768px ve altı)
+  @media (max-width: 768px) {
+    background-image: url("@/../../../public/img/movie/moviee.jpeg");
+  }
+
+  // Bilgisayar ekranları (769px ve üzeri)
+  @media (min-width: 768px) {
+    background-image: url("@/../../../public/img/movie/movieee.jpeg");
+  }
+}
+
+.bg-white.container {
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: auto;
+  background-position: center;
+  background-attachment: fixed;
+
+  // Mobil ekranlar (768px ve altı)
+  @media (max-width: 768px) {
+    background-image: url("@/../../../public/img/movie/moviee.jpeg");
+  }
+
+  // Bilgisayar ekranları (769px ve üzeri)
+  @media (min-width: 768px) {
+    background-image: url("@/../../../public/img/movie/moviee.jpeg");
+  } 
+}
+
+.cinema{
+  background-image: url("@/../../../public/img/movie/movieee.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: auto;
+  background-position: center;
+  background-attachment: fixed;   
+}
