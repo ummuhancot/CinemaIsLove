@@ -1,0 +1,23 @@
+/* COMMON */
+$color1: rgb(15, 11, 1);
+$color2: rgb(229, 237, 239);
+$color3: rgb(67, 60, 60);
+$color4: rgb(7, 27, 32);
+$color5: rgb(140,186,216);
+$color1-op-50: rgba(250, 197, 76, 0.5);
+$color2-op-50: rgba(16, 68, 81, 0.5);
+$color1-op-30: rgba(250, 197, 76, 0.3);
+$color2-op-30: rgba(16, 68, 81, 0.3);
+$color1-op-10: rgb(254, 247, 231);
+$color2-op-10: rgba(16, 68, 81, 0.1);
+
+$vendors: ("", "-webkit-", "-moz-", "-ms-", "-o-");
+
+// BOOTSTRAP
+$font-family-sans-serif: var(--font-montserrat);
+$primary: $color2;
+$secondary: $color1;
+$body-tertiary-bg: $color1-op-10;
+$navbar-light-color:$color1;
+$navbar-light-hover-color:$color2;
+$navbar-light-active-color:$color5;

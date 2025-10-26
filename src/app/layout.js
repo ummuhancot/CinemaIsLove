@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-
+import { Footer } from "@/components/common/footer/footer";
 
 export const metadata = {
   title: "CinemaIsLove",
@@ -11,6 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
+        <Footer />
       </body>
     </html>
   );
