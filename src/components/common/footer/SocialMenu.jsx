@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Link from "next/link";
 import { config } from "@/helpers/config";
 
-const menuItems = Object.entries(config.contact.socialMedia);
+const menuItems = Object.entries(config.socialMedia);
 
 export const SocialMenu = (props) => {
   return (

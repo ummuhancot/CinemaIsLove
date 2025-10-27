@@ -3,7 +3,6 @@ import { Logo } from "../header/Logo";
 import { config } from "@/helpers/config";
 import { MainMenu } from "../header/MainMenu";
 import { SocialMenu } from "./SocialMenu";
-import { ContactMenu } from "./ContactMenu";
 import "./footer.scss";
 
 export const Footer = () => {
@@ -24,11 +23,6 @@ export const Footer = () => {
           <Col xs={6} xl={4}>
             <h3>Social</h3>
             <SocialMenu />
-          </Col>
-
-          <Col xl={4}>
-            <h3>Contact</h3>
-            <ContactMenu />
           </Col>
         </Row>
       </Container>
