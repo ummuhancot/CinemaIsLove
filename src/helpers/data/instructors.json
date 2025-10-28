@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "firstName": "Ummuhani",
+    "lastName": "Çot",
+    "title": "Senior Developer",
+    "image": "instructor-02.jpg"
+  },
+  {
+    "id": 2,
+    "firstName": "Fetullah Furkan",
+    "lastName": "Özdemir",
+    "title": "Senior Developer",
+    "image": "instructor-01.jpg"
+  },
+  {
+    "id": 3,
+    "firstName": "Ekrem",
+    "lastName": "Tunçkır",
+    "title": "Senior Developer",
+    "image": "instructor-04.jpg"
+  },
+  {
+    "id": 4,
+    "firstName": "Belkıs",
+    "lastName": "Güney",
+    "title": "Backend Developer",
+    "image": "instructor-03.jpg"
+  },
+  {
+    "id": 5,
+    "firstName": "Kemal",
+    "lastName": "Ergörün",
+    "title": "Senior Developer",
+    "image": "instructor-06.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Frank",
+    "lastName": "Jones",
+    "title": "IT Educator",
+    "image": "instructor-05.jpg"
+  }
+]
