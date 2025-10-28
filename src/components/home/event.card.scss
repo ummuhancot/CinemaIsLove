@@ -1,0 +1,46 @@
+@use "../../styles/mixins" as *;
+
+.event-card{
+    height: 100%;
+
+    img{
+        width: 100%;
+        height: auto;
+         img {
+            object-fit: cover;
+            @include transition(transform 0.3s ease-in-out);
+            
+        }
+    }
+
+    .card-title{
+        margin-top: 20px;
+        color: $color1;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .card-subtitle{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: 500;
+        font-size: .9rem;
+        color: $color5;
+
+        @include flex();
+
+        i{
+            color: $color1;
+        }
+    }
+
+      
+    &:hover {
+
+        img{
+
+            @include transform(scale(1.1));
+        }
+    }
+    
+}

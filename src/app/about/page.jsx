@@ -1,9 +1,27 @@
 import React from 'react'
 
-const page = () => {
-  return (
-    <div>about</div>
-  )
-}
+import { Instructors } from "@/components/about/Instructors";
+import { Welcome } from "@/components/about/Welcome";
+import { PageHeader } from "@/components/common/page-header/PageHeader";
 
-export default page
+import { Events } from "@/components/events/Events";
+import { Spacer } from "@/components/common/spacer/Spacer";
+
+export const metadata = {
+  title: "About Us",
+  description:
+    "Learn more about our organization. Our team, our mission, and our vision.",
+};
+
+export default async function AboutUsPage() {
+  return (
+    <>
+      <PageHeader title="About Us" />
+      <Spacer />
+      <Welcome />
+      <Spacer />
+      <Instructors />
+      <Spacer />
+    </>
+  );
+}
