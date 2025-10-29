@@ -6,7 +6,7 @@ import { PageHeader } from "@/components/common/page-header/PageHeader";
 
 import { Events } from "@/components/events/Events";
 import { Spacer } from "@/components/common/spacer/Spacer";
-
+import { Slider } from "@/components/home/Slider";
 export const metadata = {
   title: "About Us",
   description:
@@ -19,7 +19,7 @@ export default async function AboutUsPage() {
       <PageHeader title="About Us" />
       <Spacer />
       <Welcome />
-      <Spacer />
+      <Slider />
       <Instructors />
       <Spacer />
     </>
