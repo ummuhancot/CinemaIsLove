@@ -11,10 +11,32 @@ $color2-op-30: rgba(16, 68, 81, 0.3);
 $color1-op-10: rgb(254, 247, 231);
 $color2-op-10: rgba(16, 68, 81, 0.1);
 
+/* YENİ EKLENEN RENKLER */
+$color-dark: #141414;
+$color-text: #FFFFFF;
+$color-primary: #E50914;
+$color-secondary: #221F1F;
+$color-light: #F5F5F1;
+$color-text-dark: #333;
+
 $vendors: ("", "-webkit-", "-moz-", "-ms-", "-o-");
 
+/* *
+ * YENİ EKLENEN FONT DEĞİŞKENLERİ
+ * (Burası yeni 3 fontu okuyacak şekilde güncellendi)
+ */
+$font-family-base: var(--font-family-base);        // Poppins
+$font-family-heading: var(--font-family-heading); // Roboto Condensed
+$font-family-secondary: var(--font-family-secondary); // Montserrat
+
 // BOOTSTRAP
-$font-family-sans-serif: var(--font-montserrat);
+// BOOTSTRAP
+// Bootstrap'in ana fontunu 'Poppins' (bizim base fontumuz) yap
+$font-family-sans-serif: $font-family-base;
+
+// Bootstrap'in başlık fontunu 'Roboto Condensed' (bizim heading fontumuz) yap
+$headings-font-family: $font-family-heading;
+
 $primary: $color2;
 $secondary: $color1;
 $body-tertiary-bg: $color1-op-10;

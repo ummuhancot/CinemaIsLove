@@ -1,11 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+
 @import "./variables";
 @import "./mixins";
-
 @import 'bootstrap/scss/bootstrap';
 @import "primeicons/primeicons.css";
 @import 'sweetalert2/src/sweetalert2.scss';
-
 @import "primereact/resources/themes/saga-orange/theme.css";
+
+:root{--font-family-base: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-secondary: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+  font-family: var(--font-family-base); // Ana font: Poppins
+  background-color: $color-dark;
+  color: $color-text;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading); // Başlık fontu: Roboto Condensed
+  letter-spacing: 1px;
+  font-weight: 700;
+}
 
 .section-title{
     text-align: center;
