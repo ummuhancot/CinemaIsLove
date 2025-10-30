@@ -1,16 +1,18 @@
 @charset "UTF-8";
+@use "../../styles/variables" as vars;
+
 /* COMMON */
 /* YENİ EKLENEN RENKLER */
-/* *
+/*
  * YENİ EKLENEN FONT DEĞİŞKENLERİ
  * (Burası yeni 3 fontu okuyacak şekilde güncellendi)
  */
 .instructors h2 {
-  background-color: rgba(250, 197, 76, 0.3);
+  background-color: vars.$color1-op-30;   /* rgba(250, 197, 76, 0.3) yerine değişken */
   padding: 30px;
   text-align: center;
   height: 100%;
-  color: rgb(229, 237, 239);
+  color: vars.$color2;                     /* rgb(229, 237, 239) yerine değişken */
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -22,4 +24,4 @@
   align-items: center;
   gap: 0;
   flex-wrap: wrap;
-}/*# sourceMappingURL=instructors.css.map */
+}
