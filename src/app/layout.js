@@ -1,3 +1,5 @@
+import 'sweetalert2/dist/sweetalert2.min.css';
+
 // Kullanılmayan Geist font importları kaldırıldı
 import "@/styles/index.scss"; // Mevcut stil dosyası
 import "@/styles/global.scss"; // Mevcut stil dosyası

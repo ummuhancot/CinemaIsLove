@@ -27,5 +27,7 @@ export const config = {
       icon: "pi pi-youtube",
     },
   },
-  apiURL: "https://localhost:8090",
+  // Backend tarafinda HTTP kullandığı için 'https' 'http' olarak değiştirildi.
+  
+  apiURL: "http://localhost:8090",
 };
