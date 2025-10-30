@@ -1,3 +1,4 @@
+@use "../../styles/variables" as *; // <-- HATA İÇİN EKLENEN SATIR
 @use "../../styles/mixins" as *;
 
 .main-slider{
@@ -17,7 +18,7 @@
         @include transform(translateY(50%));
 
         h3, p{
-            color: $color2;
+            color: $color2; // Değişken artık burada tanınacak
         }
 
           @media (min-width: 850px){

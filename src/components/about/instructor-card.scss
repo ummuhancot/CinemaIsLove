@@ -1,3 +1,4 @@
+@use "../../styles/variables" as *; // <-- DÜZELTME: "as *;" eklendi
 @use "../../styles/mixins" as *;
 
 .instructor-card{
@@ -10,12 +11,12 @@
 
     .card-title{
         pointer-events: none;
-        background-color: $color2-op-50;
+        background-color: $color2-op-50; // Değişken artık burada tanınacak
         margin: 0;
         text-align: center;
         padding: 15px;
         position: absolute;
-        color: $color1;
+        color: $color1; // Değişken artık burada tanınacak
         left: 0; right: 0; bottom: 0;
         @include transform(translateY(100%));
         @include transition(transform .5s);

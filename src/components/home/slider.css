@@ -1,10 +1,5 @@
 @charset "UTF-8";
-/* COMMON */
-/* YENİ EKLENEN RENKLER */
-/* *
- * YENİ EKLENEN FONT DEĞİŞKENLERİ
- * (Burası yeni 3 fontu okuyacak şekilde güncellendi)
- */
+
 .main-slider img {
   width: 100%;
   height: calc(100vh - 110px);

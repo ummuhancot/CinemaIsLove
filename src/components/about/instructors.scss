@@ -1,12 +1,13 @@
+@use "../../styles/variables" as *; // <-- HATA İÇİN EKLENEN SATIR
 @use "../../styles/mixins" as *;
 
 .instructors{
     h2{
-        background-color: $color1-op-30;
+        background-color: $color1-op-30; // Değişken artık burada tanınacak
         padding: 30px;
         text-align: center;
         height: 100%;
-        color: $color2;
+        color: $color2; // Değişken artık burada tanınacak
         @include border-radius(5px);
         @include flex($ai: center, $jc: center);
     }
