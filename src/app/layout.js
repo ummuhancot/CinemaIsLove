@@ -1,15 +1,10 @@
-// Kullanılmayan Geist font importları kaldırıldı
-import "@/styles/index.scss"; // Mevcut stil dosyası
-import "@/styles/global.scss"; // Mevcut stil dosyası
-import { config } from "@/helpers/config"; // Mevcut config
-import { Topbar } from "@/components/common/header/Topbar"; // Mevcut component
-import { MainMenuBar } from "@/components/common/header/MainMenuBar"; // Mevcut component
-import { Footer } from "@/components/common/footer/footer"; // Mevcut component
+import "@/styles/index.scss"; 
+import "@/styles/global.scss";
+import { config } from "@/helpers/config"; 
+import { Topbar } from "@/components/common/header/Topbar"; 
+import { MainMenuBar } from "@/components/common/header/MainMenuBar";
+import { Footer } from "@/components/common/footer/footer";
 
-// === YENİ FONT İMPORTLARI EKLENDİ ===
-// src/helpers/fonts.js dosyasından fontları import ediyoruz
-import { poppins, roboto_condensed, montserrat } from "@/helpers/fonts";
-// ===================================
 
 export const metadata = {
   title: {
@@ -21,13 +16,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // === <html> ETİKETİ GÜNCELLENDİ ===
-    // Font değişkenleri buraya className olarak eklendi
     <html
-      lang="en"
-      className={`${poppins.variable} ${roboto_condensed.variable} ${montserrat.variable}`}
     >
-      {/* ================================== */}
       <body>
         <Topbar />
         <MainMenuBar />

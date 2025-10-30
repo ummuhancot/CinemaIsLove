@@ -1,7 +1,4 @@
 @use "./variables" as *;
-//@import "./variables";
-
-//sass ın fonksiyon sistemlerinin olduğu yer çok kullandıklarımızı buraya yazıyoruz 
 
 @mixin reset-list($margin: 0, $padding: 0){
     margin: $margin;

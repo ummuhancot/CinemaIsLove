@@ -2,11 +2,10 @@ import React from 'react'
 
 import { Instructors } from "@/components/about/Instructors";
 import { Welcome } from "@/components/about/Welcome";
-import { PageHeader } from "@/components/common/page-header/PageHeader";
 
-import { Events } from "@/components/events/Events";
 import { Spacer } from "@/components/common/spacer/Spacer";
 import { Slider } from "@/components/home/Slider";
+import { PageHeader } from '@/components/common/page-header/PageHeader';
 export const metadata = {
   title: "About Us",
   description:
