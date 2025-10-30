@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* COMMON */
+/* YENİ EKLENEN RENKLER */
+/* *
+ * YENİ EKLENEN FONT DEĞİŞKENLERİ
+ * (Burası yeni 3 fontu okuyacak şekilde güncellendi)
+ */
+.main-slider img {
+  width: 100%;
+  height: calc(100vh - 110px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left top;
+     object-position: left top;
+}
+@media (min-width: 850px) {
+  .main-slider img {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+}
+.main-slider .carousel-caption {
+  bottom: 50%;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+}
+.main-slider .carousel-caption h3, .main-slider .carousel-caption p {
+  color: rgb(229, 237, 239);
+}
+@media (min-width: 850px) {
+  .main-slider .carousel-caption {
+    text-align: left;
+    width: 40%;
+  }
+}/*# sourceMappingURL=slider.css.map */

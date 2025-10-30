@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* COMMON */
+/* YENİ EKLENEN RENKLER */
+/* *
+ * YENİ EKLENEN FONT DEĞİŞKENLERİ
+ * (Burası yeni 3 fontu okuyacak şekilde güncellendi)
+ */
+.page-header {
+  background-image: linear-gradient(90deg, rgba(16, 68, 81, 0.1), rgba(250, 197, 76, 0.3), rgba(16, 68, 81, 0.1));
+  text-align: center;
+  padding: 30px 0;
+  font-weight: 700;
+  color: rgb(229, 237, 239);
+  letter-spacing: 0.3rem;
+  text-shadow: 0 0 20px rgb(15, 11, 1);
+}/*# sourceMappingURL=page-header.css.map */

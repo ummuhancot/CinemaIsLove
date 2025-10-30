@@ -1,0 +1,44 @@
+.film-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: auto;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media (max-width: 768px) {
+  .film-background {
+    background-image: url("@/../../../public/img/movie/moviee.jpeg");
+  }
+}
+@media (min-width: 768px) {
+  .film-background {
+    background-image: url("@/../../../public/img/movie/moviee.jpeg");
+  }
+}
+
+.bg-white.container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: auto;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media (max-width: 768px) {
+  .bg-white.container {
+    background-image: url("@/../../../public/img/movie/moviee.jpeg");
+  }
+}
+@media (min-width: 768px) {
+  .bg-white.container {
+    background-image: url("@/../../../public/img/movie/moviee.jpeg");
+  }
+}
+
+.cinema {
+  background-image: url("@/../../../public/img/movie/movieee.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: auto;
+  background-position: center;
+  background-attachment: fixed;
+}/*# sourceMappingURL=global.css.map */

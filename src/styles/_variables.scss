@@ -1,4 +1,4 @@
-/* COMMON */
+/* COMMON RENKLER */
 $color1: rgb(15, 11, 1);
 $color2: rgb(229, 237, 239);
 $color3: rgb(67, 60, 60);
@@ -19,27 +19,22 @@ $color-secondary: #221F1F;
 $color-light: #F5F5F1;
 $color-text-dark: #333;
 
-$vendors: ("", "-webkit-", "-moz-", "-ms-", "-o-");
+/* FONT DEĞİŞKENLERİ – Google Fonts */
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+$font-body: 'Open Sans', sans-serif;
 
-/* *
- * YENİ EKLENEN FONT DEĞİŞKENLERİ
- * (Burası yeni 3 fontu okuyacak şekilde güncellendi)
- */
-$font-family-base: var(--font-family-base);        // Poppins
-$font-family-heading: var(--font-family-heading); // Roboto Condensed
-$font-family-secondary: var(--font-family-secondary); // Montserrat
+/* Bootstrap uyarlamaları */
+$font-family-sans-serif: $font-body;         // Gövde metni için Open Sans
+$headings-font-family: $font-secondary;      // Başlıklar için Montserrat
 
-// BOOTSTRAP
-// BOOTSTRAP
-// Bootstrap'in ana fontunu 'Poppins' (bizim base fontumuz) yap
-$font-family-sans-serif: $font-family-base;
-
-// Bootstrap'in başlık fontunu 'Roboto Condensed' (bizim heading fontumuz) yap
-$headings-font-family: $font-family-heading;
-
+/* Bootstrap renk eşlemeleri */
 $primary: $color2;
 $secondary: $color1;
 $body-tertiary-bg: $color1-op-10;
-$navbar-light-color:$color1;
-$navbar-light-hover-color:$color2;
-$navbar-light-active-color:$color5;
+$navbar-light-color: $color1;
+$navbar-light-hover-color: $color2;
+$navbar-light-active-color: $color5;
+
+/* Vendor prefix listesi */
+$vendors: ("", "-webkit-", "-moz-", "-ms-", "-o-");

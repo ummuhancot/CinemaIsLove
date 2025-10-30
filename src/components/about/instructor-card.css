@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* COMMON */
+/* YENİ EKLENEN RENKLER */
+/* *
+ * YENİ EKLENEN FONT DEĞİŞKENLERİ
+ * (Burası yeni 3 fontu okuyacak şekilde güncellendi)
+ */
+.instructor-card {
+  overflow: hidden;
+}
+.instructor-card img {
+  height: auto;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+.instructor-card .card-title {
+  pointer-events: none;
+  background-color: rgba(16, 68, 81, 0.5);
+  margin: 0;
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  color: rgb(15, 11, 1);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+.instructor-card .card-title h4, .instructor-card .card-title h6 {
+  margin: 0;
+}
+.instructor-card:hover .card-title {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+.instructor-card:hover img {
+  transform: scale(1.1) rotate(2deg);
+  -webkit-transform: scale(1.1) rotate(2deg);
+  -moz-transform: scale(1.1) rotate(2deg);
+  -ms-transform: scale(1.1) rotate(2deg);
+  -o-transform: scale(1.1) rotate(2deg);
+}/*# sourceMappingURL=instructor-card.css.map */

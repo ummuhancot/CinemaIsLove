@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^5.2.8",
+    "@fontsource/open-sans": "^5.2.7",
+    "@fontsource/roboto": "^5.2.8",
     "axios": "^1.12.2",
     "bootstrap": "^5.3.8",
     "moment": "^2.30.1",
