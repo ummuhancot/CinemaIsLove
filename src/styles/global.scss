@@ -1,3 +1,4 @@
+@use "../styles/variables" as *;
 .film-background {
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,7 +16,6 @@
     background-image: url("@/../../../public/img/movie/moviee.jpeg");
   }
 }
-
 .bg-white.container {
     background-repeat: no-repeat;
   background-size: cover;

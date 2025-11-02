@@ -8,7 +8,7 @@ export const Instructors = () => {
     <Container className="instructors">
       <Row className="g-4">
         <Col lg={6}>
-          <h2 style={{ color: "#ff004c" }}>Our Most Experienced Developers</h2>
+          <h2>Our Most Experienced Developers</h2>
         </Col>
 
         {instructors.map((item) => (

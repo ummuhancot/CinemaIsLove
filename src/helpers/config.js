@@ -28,4 +28,38 @@ export const config = {
     },
   },
   apiURL: "https://localhost:8090",
+  genders: [
+    { label: "Female", value: "FEMALE" },
+    { label: "Male", value: "MALE" },
+    { label: "Other", value: "OTHER" },
+  ],
+  haltype: [
+    { label: "IMAX", value: "IMAX" },
+    { label: "VIP", value: "VIP" },
+    { label: "Standard", value: "STANDARD" },
+    { label: "3D salon", value: "THREE_D" },
+  ],
+  movestatus: [
+    { label: "Coming Soon", value: "COMING_SOON" },
+    { label: "In Theaters", value: "IN_THEATERS" },
+    { label: "Presale", value: "PRESALE" },
+    { label: "Finished", value: "FINISHED" },
+  ],
+  paymentstatus: [
+    { label: "Pending", value: "PENDING" },
+    { label: "Success", value: "SUCCESS" },
+    { label: "Failed", value: "FAILED" },
+  ],
+  ticketstatus: [
+    { label: "Empty", value: "EMPTY" },
+    { label: "Reserved", value: "RESERVED" },
+    { label: "Cancelled", value: "CANCELLED" },
+    { label: "Paid", value: "PAID" },
+  ],
+  userRightsOnRoutes: [
+    {
+      urlRegex: /\/dashboard$/,
+      roles: ["Admin", "Manager", "Customer"],
+    },
+  ],
 };
