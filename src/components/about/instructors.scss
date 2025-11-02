@@ -3,7 +3,8 @@
 
 .instructors{
     h2{
-        background-color: $color1-op-30;
+        background-color: $color-light-bg-op-15;
+         backdrop-filter: blur(6px);
         padding: 30px;
         text-align: center;
         height: 100%;

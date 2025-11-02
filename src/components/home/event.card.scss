@@ -15,7 +15,7 @@
 
     .card-title{
         margin-top: 20px;
-        color: $color1;
+        color: $color-red;
         font-size: 1.5rem;
         text-align: center;
     }
@@ -25,12 +25,12 @@
         padding-bottom: 20px;
         font-weight: 500;
         font-size: .9rem;
-        color: $color5;
+        color: $color-red;
 
         @include flex();
 
         i{
-            color: $color1;
+            color: $color-red;
         }
     }
 
