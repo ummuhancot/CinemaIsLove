@@ -27,7 +27,7 @@ export const config = {
       icon: "pi pi-youtube",
     },
   },
-  apiURL: "https://localhost:8090",
+  apiURL: "http://localhost:8090",
   genders: [
     { label: "Female", value: "FEMALE" },
     { label: "Male", value: "MALE" },
@@ -56,179 +56,101 @@ export const config = {
     { label: "Cancelled", value: "CANCELLED" },
     { label: "Paid", value: "PAID" },
   ],
-  // Users
+  // USERS
   userRightsOnRoutes: [
+    { urlRegex: /(?:\/dashboard)?\/api\/login$/, roles: ["Public"] },
+
     {
-      urlRegex: /\/api\/users(\/.*)?$/,
+      urlRegex: /(?:\/dashboard)?\/api\/users(\/.*)?$/,
       roles: ["Admin", "Manager", "Customer"],
     },
-    { urlRegex: /\/api\/users\/reset-password$/, roles:["Admin,Manager"]},
-    { urlRegex: /\/api\/users\/admin$/, roles: ["Admin", "Manager"] },
-    { urlRegex: /\/api\/users\/\d+\/admin$/, roles: ["Admin", "Manager"] },
-    {
-      urlRegex: /\/api\/users\/auth$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    {
-      urlRegex: /\/api\/users\/auth\/[A-Za-z]+$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    {
-      urlRegex: /\/api\/users\/getAllAdminManager$/,
-      roles: ["Admin", "Manager"],
-    },
-    { urlRegex: /\/api\/users\/getAllCustomers$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/users\/reset-password$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/users\/admin$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/users\/\d+\/admin$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/users\/auth$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/users\/auth\/[A-Za-z]+$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/users\/getAllAdminManager$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/users\/getAllCustomers$/, roles: ["Admin", "Manager"] },
   ],
-  // Favorite Controller
+
+  // FAVORITES
   favoriteRightsOnRoutes: [
-    {
-      urlRegex: /\/api\/favorites\/\d+$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    {
-      urlRegex: /\/api\/favorites\/\d+\/favorites\/\d+$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    { urlRegex: /\/api\/favorites\/getAll$/, roles: ["Admin", "Manager"] },
-    {
-      urlRegex: /\/api\/favorites\/\d+\/getAll$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
+    { urlRegex: /(?:\/dashboard)?\/api\/favorites\/\d+$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/favorites\/\d+\/favorites\/\d+$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/favorites\/getAll$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/favorites\/\d+\/getAll$/, roles: ["Admin", "Manager", "Customer"] },
   ],
 
-  // City Controller
+  // CITIES
   cityRightsOnRoutes: [
-    { urlRegex: /\/api\/cities\/save$/, roles: ["Admin"] },
-    {
-      urlRegex: /\/api\/cities\/city-cinema\/\d+$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    { urlRegex: /\/api\/cities\/delete\/\d+$/, roles: ["Admin"] },
-    { urlRegex: /\/api\/cities\/update\/\d+$/, roles: ["Admin", "Manager"] },
-    {
-      urlRegex: /\/api\/cities\/getAllcity-movie$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
+    { urlRegex: /(?:\/dashboard)?\/api\/cities\/save$/, roles: ["Admin"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/cities\/city-cinema\/\d+$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/cities\/delete\/\d+$/, roles: ["Admin"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/cities\/update\/\d+$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/cities\/getAllcity-movie$/, roles: ["Admin", "Manager", "Customer"] },
   ],
 
-  // Cinema Controller
+  // CINEMAS
   cinemaRightsOnRoutes: [
-    {
-      urlRegex: /\/api\/cinemas\/city-hall$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    { urlRegex: /\/api\/cinemas\/save$/, roles: ["Admin"] },
-    { urlRegex: /\/api\/cinemas\/\d+\/auth\/\d+$/, roles: ["Admin"] },
-    { urlRegex: /\/api\/cinemas\/update\/\d+$/, roles: ["Admin"] },
-    {
-      urlRegex: /\/api\/cinemas\/\d+$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    { urlRegex: /\/api\/cinemas\/\d+\/halls$/, roles: ["Admin", "Manager"] },
-    {
-      urlRegex: /\/api\/cinemas\/specialhalls\/\d+$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
+    { urlRegex: /(?:\/dashboard)?\/api\/cinemas\/city-hall$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/cinemas\/save$/, roles: ["Admin"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/cinemas\/\d+\/auth\/\d+$/, roles: ["Admin"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/cinemas\/update\/\d+$/, roles: ["Admin"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/cinemas\/\d+$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/cinemas\/\d+\/halls$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/cinemas\/specialhalls\/\d+$/, roles: ["Admin", "Manager", "Customer"] },
   ],
-  // Tickets
+
+  // TICKETS
   ticketRightsOnRoutes: [
-    { urlRegex: /\/api\/tickets\/reserve$/, roles: ["PUBLIC"] },
-    {
-      urlRegex: /\/api\/tickets\/reserve-multiple$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    {
-      urlRegex: /\/api\/tickets\/cancel\/\d+$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    { urlRegex: /\/api\/tickets\/getAll$/, roles: ["Admin", "Manager"] },
-    {
-      urlRegex: /\/api\/tickets\/getById\/\d+$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    { urlRegex: /\/api\/tickets\/status\/[A-Za-z]+$/, roles: ["PUBLIC"] },
-    {
-      urlRegex: /\/api\/tickets\/user\/\d+\/status\/[A-Za-z]+$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    { urlRegex: /\/api\/tickets\/update\/\d+$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/tickets\/reserve$/, roles: ["PUBLIC"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/tickets\/reserve-multiple$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/tickets\/cancel\/\d+$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/tickets\/getAll$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/tickets\/getById\/\d+$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/tickets\/status\/[A-Za-z]+$/, roles: ["PUBLIC"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/tickets\/user\/\d+\/status\/[A-Za-z]+$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/tickets\/update\/\d+$/, roles: ["Admin", "Manager"] },
   ],
 
-  // ShowTimes
+  // SHOWTIMES
   showTimeRightsOnRoutes: [
-    {
-      urlRegex: /\/api\/showtime(\/.*)?$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    { urlRegex: /\/api\/showtime\/create$/, roles: ["Admin", "Manager"] },
-    {
-      urlRegex: /\/api\/showtime\/create-multiple$/,
-      roles: ["Admin", "Manager"],
-    },
-    { urlRegex: /\/api\/showtime\/\d+$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/showtime\/update\/\d+$/, roles: ["Admin", "Manager"] },
-    { urlRegex: /\/api\/showtime\/delete\/\d+$/, roles: ["Admin", "Manager"] },
-    { urlRegex: /\/api\/showtime\/all$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/showtime(\/.*)?$/, roles: ["Admin", "Manager", "Customer"] },
   ],
 
-  // Payments
+  // PAYMENTS
   paymentRightsOnRoutes: [
-    {
-      urlRegex: /\/api\/payments(\/.*)?$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    { urlRegex: /\/api\/payments\/pay$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/payments\/pay-multiple$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/payments\/fail\/\d+$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/payments\/successful$/, roles: ["Admin", "Manager"] },
-    {
-      urlRegex: /\/api\/payments\/successful\/\d+$/,
-      roles: ["Admin", "Manager"],
-    },
-    { urlRegex: /\/api\/payments\/failed$/, roles: ["Admin", "Manager"] },
-    { urlRegex: /\/api\/payments\/failed\/\d+$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/payments(\/.*)?$/, roles: ["Admin", "Manager", "Customer"] },
   ],
 
-  // Movies
+  // MOVIES
   movieRightsOnRoutes: [
-    {
-      urlRegex: /\/api\/movies(\/.*)?$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    { urlRegex: /\/api\/movies\/save$/, roles: ["Admin"] },
-    { urlRegex: /\/api\/movies\/update\/\d+$/, roles: ["Admin"] },
-    { urlRegex: /\/api\/movies\/\d+$/, roles: ["Admin"] },
-    { urlRegex: /\/api\/movies\/\d+\/show-times$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/movies\/hall\/[A-Za-z]+$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/movies\/in-theaters$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/movies\/in-theaters\/active$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/movies\/coming-soon$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/movies\/search$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/movies\/getOneMovie\/\d+$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/movies\/\d+\/admin$/, roles: ["Admin"] },
-    { urlRegex: /\/api\/movies\/getAllMovies$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/movies\/bulk$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies(\/.*)?$/, roles: ["Admin", "Manager", "Customer"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/save$/, roles: ["Admin"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/update\/\d+$/, roles: ["Admin"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/\d+$/, roles: ["Admin"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/\d+\/admin$/, roles: ["Admin"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/bulk$/, roles: ["Admin", "Manager"] },
+
+    // PUBLIC endpoints
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/\d+\/show-times$/, roles: ["PUBLIC"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/hall\/[A-Za-z]+$/, roles: ["PUBLIC"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/in-theaters$/, roles: ["PUBLIC"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/in-theaters\/active$/, roles: ["PUBLIC"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/coming-soon$/, roles: ["PUBLIC"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/search$/, roles: ["PUBLIC"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/getOneMovie\/\d+$/, roles: ["PUBLIC"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/movies\/getAllMovies$/, roles: ["PUBLIC"] },
   ],
 
-  // Images
-  imageRightsOnRoutes: [
-    {
-      urlRegex: /\/api\/image(\/.*)?$/,
-      roles: ["Admin", "Manager", "Customer"],
-    },
-    { urlRegex: /\/api\/image\/\d+$/, roles: ["PUBLIC"] },
-    { urlRegex: /\/api\/image\/\d+$/, roles: ["Admin"] },
-    { urlRegex: /\/api\/image\/movie\/\d+$/, roles: ["PUBLIC"] },
-  ],
-
-  // Halls
+  // HALLS
   hallRightsOnRoutes: [
-    { urlRegex: /\/api\/halls(\/.*)?$/, roles: ["Admin", "Manager"] },
-    { urlRegex: /\/api\/halls\/save$/, roles: ["Admin"] },
-    { urlRegex: /\/api\/halls\/\d+$/, roles: ["Admin", "Manager"] },
-    { urlRegex: /\/api\/halls\/deleted\/\d+$/, roles: ["Admin", "Manager"] },
-    { urlRegex: /\/api\/halls\/getAllHall$/, roles: ["Admin", "Manager"] },
-    { urlRegex: /\/api\/halls\/updateHall\/\d+$/, roles: ["Admin", "Manager"] },
-    { urlRegex: /\/api\/halls\/\d+\/seats$/, roles: ["PUBLIC"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/halls(\/.*)?$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/halls\/save$/, roles: ["Admin"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/halls\/\d+$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/halls\/deleted\/\d+$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/halls\/getAllHall$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/halls\/updateHall\/\d+$/, roles: ["Admin", "Manager"] },
+    { urlRegex: /(?:\/dashboard)?\/api\/halls\/\d+\/seats$/, roles: ["PUBLIC"] },
   ],
 };
