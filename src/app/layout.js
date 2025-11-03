@@ -5,6 +5,7 @@ import { Topbar } from "@/components/common/header/Topbar";
 import { MainMenuBar } from "@/components/common/header/MainMenuBar";
 import { Footer } from "@/components/common/footer/footer";
 import { montserrat, poppins, roboto_condensed, roboto_condensed as robotoCondensed,  } from "@/helpers/fonts";
+import { MantineProvider } from "@mantine/core";
 
 
 export const metadata = {
@@ -19,12 +20,15 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${roboto_condensed.variable} ${montserrat.variable}`}>
+      className={`${poppins.variable} ${roboto_condensed.variable} ${montserrat.variable}`}
+    >
       <body>
-        <Topbar />
-        <MainMenuBar />
-        {children}
-        <Footer />
+        <MantineProvider>
+          <Topbar />
+          <MainMenuBar />
+          {children}
+          <Footer />
+        </MantineProvider>
       </body>
     </html>
   );
