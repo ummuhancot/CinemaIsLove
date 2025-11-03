@@ -10,7 +10,7 @@ export const Welcome = () => {
           <Image
             src="/img/about/welcome.jpeg"
             width={900}
-            height={700}
+            height={500}
             alt={config.project.slogan}
             className="img-fluid "
           />

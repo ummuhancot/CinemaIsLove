@@ -17,11 +17,10 @@ export default async function AboutUsPage() {
     <>
       <Spacer />
       <PageHeader title="About Us" />
-      <Spacer />
       <Welcome />
       <Spacer />
       <Slider />
-      <Spacer />
+      <Spacer/>
       <Instructors />
       <Spacer />
     </>
