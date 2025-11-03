@@ -1,5 +1,5 @@
 @use "../../styles/mixins" as *;
-
+@use "../../styles/variables" as *; 
 .event-card{
     height: 100%;
 
@@ -30,7 +30,7 @@
         @include flex();
 
         i{
-            color: $color1;
+            color:$color1;
         }
     }
 

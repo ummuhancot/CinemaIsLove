@@ -16,9 +16,9 @@ export default async function AboutUsPage() {
   return (
     <>
       <PageHeader title="About Us" />
-      <Spacer />
       <Welcome />
       <Slider />
+      <Spacer/>
       <Instructors />
       <Spacer />
     </>
