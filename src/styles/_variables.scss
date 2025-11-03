@@ -11,22 +11,28 @@ $color2-op-30: rgba(16, 68, 81, 0.3);
 $color1-op-10: rgb(254, 247, 231);
 $color2-op-10: rgba(16, 68, 81, 0.1);
 
+$color-light-bg-op-15: rgba(255, 255, 255, 0.15);
+
+$color-light-bg-op-25: rgba(255, 255, 255, 0.25);
+
+$color-dark-bg-op-25: rgba(0, 0, 0, 0.25);
 /* YENİ EKLENEN RENKLER */
 $color-dark: #141414;
 $color-text: #FFFFFF;
-$color-primary: #E50914;
-$color-secondary: #221F1F;
+$color-red: #E50914;
+$color-dark-gray: #221F1F;
 $color-light: #F5F5F1;
 $color-text-dark: #333;
 
 /* FONT DEĞİŞKENLERİ – Google Fonts */
-$font-primary: 'Roboto', sans-serif;
-$font-secondary: 'Montserrat', sans-serif;
-$font-body: 'Open Sans', sans-serif;
+$roboto: var(--font-roboto);
+$montserrat: var(--font-montserrat);
+$sans-serif: var(--font-sans-serif);
 
-/* Bootstrap uyarlamaları */
-$font-family-sans-serif: $font-body;         // Gövde metni için Open Sans
-$headings-font-family: $font-secondary;      // Başlıklar için Montserrat
+/* Bootstrap  – DÜZELTİLDİ */
+$font-family-sans-serif: $sans-serif;   
+$headings-font-family: $montserrat;     
+$body-font-family: $roboto;  
 
 /* Bootstrap renk eşlemeleri */
 $primary: $color2;

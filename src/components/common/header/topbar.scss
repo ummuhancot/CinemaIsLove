@@ -1,7 +1,7 @@
-@use "../../../styles/mixins" as *;
+@use "../../../styles/variables" as *;
 
 .topbar {
-  background-color: black;
+    background-color: $color-light-bg-op-15;
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -22,31 +22,17 @@
 
         .pi{
             margin: 5px;
-            color: rgb(217, 11, 11);
+            color: $color-red;
 
         }
         .span {
-          color: rgb(211, 59, 59);
+          color: $color-red;
           font-weight: bold;
         }
     }
   }
 }
 
-button.navbar-toggler.collapsed {
-  border-color: red;
-  &:active {
-    border-color: red;
-  }
-  &:focus {
-    border-color: red;
-  }
-  &:hover {
-    border-color: red;
-  }
-  &before {
-    border-color: red;
-  }
+
   
 
-}

@@ -11,12 +11,12 @@
 
     .card-title{
         pointer-events: none;
-        background-color: $color2-op-50;
+        background-color: $color-dark-bg-op-25;
         margin: 0;
         text-align: center;
         padding: 15px;
         position: absolute;
-        color: $color1;
+        color: $color-dark;
         left: 0; right: 0; bottom: 0;
         @include transform(translateY(100%));
         @include transition(transform .5s);

@@ -15,8 +15,10 @@ export const metadata = {
 export default async function AboutUsPage() {
   return (
     <>
+      <Spacer />
       <PageHeader title="About Us" />
       <Welcome />
+      <Spacer />
       <Slider />
       <Spacer/>
       <Instructors />
