@@ -1,12 +1,14 @@
 "use client";
 
-import { PasswordInput, TextInput } from "@mantine/core";
+import { PasswordInput } from "@mantine/core";
 import { Alert, Card } from "react-bootstrap";
 import { SubmitButton } from "../common/form-fields/SubmitButton";
 import { useActionState } from "react";
 import { loginAction } from "@/actions/auth-actions";
 
 import "../login/login-form.scss";
+import { TextInput } from "../common/form-fields/TextInput";
+import { PasswordImput } from "../common/form-fields/PasswordImput";
 
 
 const LoginForm = () => {
@@ -23,16 +25,16 @@ const LoginForm = () => {
               label="Email"
               name="email"
               className="mb-3"
+              iconBefore="user"
               errorMessage={state?.errors?.email}
-              defaultValue="admin@example.com"
             />
 
-            <PasswordInput
+            <PasswordImput
               label="Password"
               name="password"
               className="mb-3"
+              iconAfter="key"
               errorMessage={state?.errors?.password}
-              defaultValue="Admin123!"
             />
 
             {!state?.ok && state?.message && (

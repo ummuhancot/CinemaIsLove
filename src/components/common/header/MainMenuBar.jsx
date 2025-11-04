@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Logo } from "./Logo";
 import Image from "next/image";
-import { config } from "@/helpers/config";
+import { appConfig } from "@/helpers/config";
 import { MainMenu } from "@/components/common/header/MainMenu.jsx";
 import Link from "next/link";
 
@@ -32,7 +32,7 @@ export const MainMenuBar = () => {
                 src="/img/logo/logomeinmenu-light.png"
                 width={50}
                 height={50}
-                alt={config.project.name}
+                alt={appConfig.project.name}
               />
             </Offcanvas.Title>
           </Offcanvas.Header>

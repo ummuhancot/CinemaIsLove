@@ -1,5 +1,5 @@
 import { auth } from "../../auth";
-import { config } from "./config";
+import { appConfig } from "../helpers/config";
 
 export const getAuthHeader = async () => {
   const session = await auth();
@@ -34,7 +34,7 @@ export const getIsTokenValid = (token) => {
 };
 
 export const getIsUserAuthorized = (role, path) => {
-  const userRight = config.userRightsOnRoutes.find((item) =>
+  const userRight = appConfig.userRightsOnRoutes.find((item) =>
     item.urlRegex.test(path)
   );
 

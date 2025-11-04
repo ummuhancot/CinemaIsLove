@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Logo } from "../header/Logo";
-import { config } from "@/helpers/config";
+import { appConfig } from "@/helpers/config";
 import { MainMenu } from "../header/MainMenu";
 import { SocialMenu } from "./SocialMenu";
 import "./footer.scss";
@@ -12,7 +12,7 @@ export const Footer = () => {
         <Row className="g-4">
           <Col xs={12}>
             <Logo theme="light" />
-            <p className="mt-3">{config.project.description}</p>
+            <p className="mt-3">{appConfig.project.description}</p>
           </Col>
 
           <Col xs={6} xl={4}>

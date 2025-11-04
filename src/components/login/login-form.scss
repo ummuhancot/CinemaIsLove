@@ -16,9 +16,9 @@
 
     .card{
         border: none;
-        border-top: 7px solid $color-dark-bg-op-25;
+        border-top: 7px solid $color-red;
         padding: 0px 30px 30px 30px;
-        @include shadow(box, 0 10px 20px -10px $color-dark-bg-op-25);
+        @include shadow(box, 0 10px 20px -10px $color-red);
 
         h4{
             font-style: italic;
