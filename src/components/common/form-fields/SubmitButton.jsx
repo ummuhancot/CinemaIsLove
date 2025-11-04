@@ -9,7 +9,7 @@ export const SubmitButton = (props) => {
   const iconSrc = pending ? "pi pi-spin pi-spinner" : `pi pi-${icon}`;
 
   return (
-    <Button type="submit" variant="outline-primary">
+    <Button type="submit" variant="outline-danger">
       {!!icon && <i className={iconSrc}></i>}
       &nbsp;
       {title}

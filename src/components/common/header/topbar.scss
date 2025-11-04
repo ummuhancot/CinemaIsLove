@@ -1,7 +1,10 @@
 @use "../../../styles/variables" as *;
 
 .topbar {
-    background-color: $color-light-bg-op-15;
+     background-color: $color-light-bg-op-15;
+    backdrop-filter: blur(6px);
+    color: $color-light;
+    padding: 70px 0;
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -23,12 +26,12 @@
         .pi{
             margin: 5px;
             color: $color-red;
-
-        }
-        .span {
-          color: $color-red;
-          font-weight: bold;
-        }
+            font-style: italic;
+            font-size: 15px;
+            
+            
+          }
+         
     }
   }
 }

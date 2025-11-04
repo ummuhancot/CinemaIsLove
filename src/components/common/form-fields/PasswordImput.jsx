@@ -23,13 +23,11 @@ export const PasswordImput = (props) => {
   return (
     <InputGroup className={`${className} ${errorMessage ? "mb-5" : ""}`}>
       
-        <InputGroup.Text id="basic-addon1" onClick={handleClick}
-        style={{cursor:"pointer"}}>
-
-        {type === "password" ? (<i className="pi pi-eye-slash"></i>) :
-          (<i className="pi pi-eye"></i>)}
-          
-        </InputGroup.Text>
+        {!!iconAfter && (
+          <InputGroup.Text id="basic-addon1">
+            <i className={`pi pi-${iconAfter}`}></i>
+          </InputGroup.Text>
+        )}
       
 
       <FloatingLabel controlId={name} label={label}>
@@ -45,11 +43,13 @@ export const PasswordImput = (props) => {
         </Form.Control.Feedback>
       </FloatingLabel>
 
-      {!!iconAfter && (
-        <InputGroup.Text id="basic-addon1">
-          <i className={`pi pi-${iconAfter}`}></i>
+        <InputGroup.Text id="basic-addon1" onClick={handleClick}
+        style={{cursor:"pointer"}}>
+
+        {type === "password" ? (<i className="pi pi-eye-slash"></i>) :
+          (<i className="pi pi-eye"></i>)}
+          
         </InputGroup.Text>
-      )}
     </InputGroup>
   );
 };
