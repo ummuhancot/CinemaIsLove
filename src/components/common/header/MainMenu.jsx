@@ -10,13 +10,12 @@ export const MainMenu = (props) => {
     <Nav {...props} className="me-auto  mb-lg-0 text-light">
       {menuItems.map((item) => (
         <Nav.Link
-
-          className="border border-white p-3 m-3 text-center"
+          className="border border-danger p-3 m-4 text-center text-white"
           key={item.link}
           href={item?.link}
           as={Link}
         >
-          <i className={item?.icon}></i>
+          <i className={`${item?.icon} text-danger`}></i>
           &nbsp;
           {item?.title}
         </Nav.Link>

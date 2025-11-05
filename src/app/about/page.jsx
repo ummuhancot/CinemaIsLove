@@ -21,7 +21,9 @@ export default async function AboutUsPage() {
       <Spacer />
       <Slider />
       <Spacer/>
-      <Instructors />
+      <div className="cinema p-4">
+        <Instructors />
+      </div>
       <Spacer />
     </>
   );

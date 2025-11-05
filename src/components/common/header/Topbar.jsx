@@ -1,20 +1,24 @@
-"use client";
-
-import React from "react";
-import Link from "next/link";
 import { appConfig } from "@/helpers/config";
+import Link from "next/link";
 import { Container } from "react-bootstrap";
 import "./topbar.scss";
-import "primeicons/primeicons.css";
+import { AuthMenu } from "./AuthMenu";
+import { Spacer } from "../spacer/Spacer";
+import { RegisterMenu } from "./RegisterMenu";
 
 export const Topbar = () => {
   return (
-    <div className="topbar bg-dark text-light py-2">
+    <div className="topbar">
       <Container>
         <div className="slogan">
-          <i className="pi pi-heart">{appConfig.project.slogan}</i>
-          <i className="pi pi-user"></i>
+          <i className="pi pi-heart-fill"></i>
+          <span className="text-danger fs-5 fst-italic fw-bold">
+            {appConfig.project.slogan}
+          </span>
         </div>
+        <AuthMenu />
+        <Spacer />
+        <RegisterMenu />
       </Container>
     </div>
   );

@@ -1,0 +1,14 @@
+{
+  "admin": [
+    { "title": "Dashboard", "link": "/dashboard" },
+    { "title": "Admin ", "link": "/dashboard/admin" },
+    { "title": "Manager ", "link": "/dashboard/manager" }
+ 
+  ],
+  "manager": [
+    { "title": "Dashboard", "link": "/dashboard" }
+  ],
+  "customer": [
+    { "title": "Dashboard", "link": "/dashboard" }
+  ]
+}
