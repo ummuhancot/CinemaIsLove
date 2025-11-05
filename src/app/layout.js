@@ -25,7 +25,8 @@ export default function RootLayout({ children }) {
       <body>
         <MantineProvider>
           <Topbar />
-          <MainMenuBar />
+          <div className="cinema">
+            <MainMenuBar/></div>
           {children}
           <Footer />
         </MantineProvider>

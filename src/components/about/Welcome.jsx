@@ -1,4 +1,4 @@
-import { config } from "@/helpers/config";
+import { appConfig } from "@/helpers/config";
 import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
 
@@ -11,7 +11,7 @@ export const Welcome = () => {
             src="/img/about/welcome.jpeg"
             width={900}
             height={500}
-            alt={config.project.slogan}
+            alt={appConfig.project.slogan}
             className="img-fluid "
           />
         </Col>

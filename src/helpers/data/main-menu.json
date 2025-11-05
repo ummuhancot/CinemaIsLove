@@ -18,10 +18,5 @@
     "title": "About",
     "link": "/about",
     "icon": "pi pi-info-circle"
-  },
-  {
-    "title":"Login",
-    "link":"/login",
-    "icon":"pi pi-sign-in"
   }
 ]

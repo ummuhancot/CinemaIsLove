@@ -1,7 +1,7 @@
 import { PageHeader } from "@/components/common/page-header/PageHeader"
 import { Spacer } from "@/components/common/spacer/Spacer"
 import LoginForm from "@/components/login/LoginForm"
-import SingUp from "@/components/login/SingUp"
+
 
 export const metadata ={
   title : "Login",
@@ -16,10 +16,6 @@ const page = () => {
       <Spacer />
       <LoginForm />
       <Spacer/>
-      <PageHeader title="Sing Up" />
-      <Spacer />
-      <SingUp />
-      <Spacer />
     </>
   );
 }

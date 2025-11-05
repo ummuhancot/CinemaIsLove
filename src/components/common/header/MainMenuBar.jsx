@@ -15,7 +15,7 @@ export const MainMenuBar = () => {
     <Navbar
       expand="lg"
       sticky="top"
-      className="border border-danger film-background"
+      className="border border-danger content-section"
       collapseOnSelect
     >
       <Container>
@@ -29,14 +29,14 @@ export const MainMenuBar = () => {
           <Offcanvas.Header className="cinema" closeButton>
             <Offcanvas.Title id="main-menu-title">
               <Image
-                src="/img/logo/logomeinmenu-light.png"
-                width={50}
-                height={50}
+                src="/img/logo/logomeinmenu-dark.png"
+                width={70}
+                height={70}
                 alt={appConfig.project.name}
               />
             </Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body className="film-background">
+          <Offcanvas.Body className="bg-black">
             <MainMenu className="justify-content-center flex-grow-1" />
           </Offcanvas.Body>
         </Navbar.Offcanvas>
