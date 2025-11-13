@@ -1,24 +1,14 @@
 import Link from "next/link";
-import userMenuData from "@/helpers/data/user-menu.json";
-import { UserMenu } from "./UserMenu";
-import { auth } from "../../../../auth";
+
 
 
 export const RegisterMenu = async () => {
-  const session = await auth();
-
-  const role = session?.user?.role;
-  const userMenu = role ? userMenuData[role?.toLowerCase()] : null;
 
   return (
-    <>
-      {role ? (
-        <UserMenu session={session} userMenu={userMenu} />
-      ) : (
-        <Link href="/register" className="btn btn-danger m-2">
-          <i className="pi pi-user-plus"></i> Register
-        </Link>
-      )}
-    </>
+    <div>
+      <Link href="/register" className="btn btn-danger m-2">
+        <i className="pi pi-user-plus"></i> Register
+      </Link>
+    </div>
   );
 };

@@ -1,0 +1,17 @@
+{
+  "admin": [
+    { "title": "Ana Sayfa", "link": "/dashboard", "icon": "pi pi-home" },
+    {
+      "title": "Kullanıcılar",
+      "link": "/dashboard/users",
+      "icon": "pi pi-users"
+    },
+    { "title": "Ayarlar", "link": "/dashboard/settings", "icon": "pi pi-cog" },
+    { "title": "Çıkış Yap", "link": "/logout", "icon": "pi pi-sign-out" }
+  ],
+  "user": [
+    { "title": "Ana Sayfa", "link": "/dashboard", "icon": "pi pi-home" },
+    { "title": "Profilim", "link": "/dashboard/profile", "icon": "pi pi-user" },
+    { "title": "Çıkış Yap", "link": "/logout", "icon": "pi pi-sign-out" }
+  ]
+}
