@@ -16,7 +16,11 @@ export const loginAction = async (prevState, formData) => {
   try {
     AuthSchema.validateSync(fields, { abortEarly: false });
 
-    await signIn("credentials", fields); 
+    await signIn("credentials", {
+      ...fields,
+      redirectTo: "/dashboard",
+
+    });
 
   } catch (error) {
     if (error instanceof YupValidationError) {

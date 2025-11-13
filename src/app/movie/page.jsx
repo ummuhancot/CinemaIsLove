@@ -1,8 +1,14 @@
+import { PageHeader } from '@/components/common/page-header/PageHeader'
+
 import React from 'react'
 
 const page = () => {
   return (
-    <div>movie</div>
+    <div>
+      
+      <PageHeader title="Movies" />
+     
+    </div>
   )
 }
 

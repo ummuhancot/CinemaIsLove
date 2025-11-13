@@ -1,0 +1,122 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+.movie-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  .mantine-Card-root {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      .text-input-select {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-weight: 500;
+          margin-bottom: 0.3rem;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.65rem 0.75rem 0.65rem 2.5rem; // solda ikon için boşluk
+          border-radius: 8px;
+          border: 1px solid #ccc;
+          font-size: 1rem;
+          transition: border-color 0.2s, box-shadow 0.2s;
+
+          &:focus {
+            border-color: #4a90e2;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+          }
+
+          &::placeholder {
+            color: #aaa;
+          }
+        }
+
+        .icon-before {
+          position: absolute;
+          left: 0.75rem;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 1.1rem;
+          color: #4a90e2;
+          pointer-events: none;
+        }
+
+        .error-message {
+          color: #e74c3c;
+          font-size: 0.875rem;
+          margin-top: 0.25rem;
+        }
+      }
+
+      .form-select {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+
+        &:focus {
+          border-color: #4a90e2;
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+        }
+      }
+
+      .mantine-Button-root {
+        margin-top: 1rem;
+        padding: 0.75rem;
+        font-weight: 600;
+        border-radius: 8px;
+        background-color: $color-red;
+        color: $color-light ;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color:$color-light ;
+          color: $color-dark;
+              transition: background-color 0.3s;
+        }
+
+        &:disabled {
+          background-color: $color-dark;
+          color:$color-light ;
+          cursor: not-allowed;
+          transition: background-color 0.5s;
+
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    .mantine-Card-root {
+      padding: 1rem;
+    }
+  }
+}

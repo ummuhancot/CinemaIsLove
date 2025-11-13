@@ -2,7 +2,16 @@
   "admin": [
     { "title": "Dashboard", "link": "/dashboard" },
     { "title": "Admin ", "link": "/dashboard/admin" },
-    { "title": "Manager ", "link": "/dashboard/manager" }
+    { "title": "Manager ", "link": "/dashboard/manager" },
+    { "title": "Customers ", "link": "/dashboard/customers" },
+    { "title": "Movies ", "link": "/dashboard/movies" },
+    { "title": "Showtimes ", "link": "/dashboard/showtimes" },
+    { "title": "Reservations ", "link": "/dashboard/reservations" },
+    { "title": "Cinema ", "link": "/dashboard/cinema" },
+    { "title": "Cities ", "link": "/dashboard/cities" },
+    { "title": "Halls ", "link": "/dashboard/halls" },
+    { "title": "Seats ", "link": "/dashboard/seats" },
+    { "title": "image ", "link": "/dashboard/image" }
  
   ],
   "manager": [

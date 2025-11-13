@@ -18,7 +18,7 @@ export const registerAction = async (prevState, formData) => {
     }
 
     await signIn("credentials", {
-      redirect: false,
+      redirectTo: "/login",
       email: fields.email,
       password: fields.password,
     });
