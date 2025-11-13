@@ -7,7 +7,6 @@ import { Logo } from "./Logo";
 import Image from "next/image";
 import { appConfig } from "@/helpers/config";
 import { MainMenu } from "@/components/common/header/MainMenu.jsx";
-import Link from "next/link";
 
 
 export const MainMenuBar = () => {
