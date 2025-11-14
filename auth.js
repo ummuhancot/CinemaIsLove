@@ -1,5 +1,6 @@
 import { getIsTokenValid, getIsUserAuthorized } from "@/helpers/auth-helpers";
 import { login } from "@/services/auth-service";
+import { jwtDecode } from "jwt-decode";
 
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
@@ -8,16 +9,19 @@ import { NextResponse } from "next/server";
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Credentials({
-      authorize: async (credentials) => { 
+      authorize: async (credentials) => {
         const res = await login(credentials);
-        const data = await res.json();
+        // auth-service.js artık fetch return ediyor, res.json() yok
+        const data = res; // Doğrudan data
 
-        if (!res.ok) return null; 
+        if (!data?.authToken) return null;
+
         const payload = {
-          user: { ...data },
-          authToken: data.token,
+          user: {
+            authToken: data.authToken,
+          },
+          authToken: data.authToken,
         };
-        delete payload.user.token;
 
         return payload;
       },
@@ -26,11 +30,26 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        return {
-          ...token,
-          user: user.user,
-          authToken: user.authToken,
-        };
+        try {
+          const decoded = jwtDecode(user.authToken);
+
+          console.log("JWT Decoded:", JSON.stringify(decoded, null, 2));
+          console.log("Roles:", decoded.roles);
+
+          return {
+            ...token,
+            user: {
+              id: decoded.userId,
+              email: decoded.sub,
+              name: decoded.sub.split("@")[0],
+              roles: decoded.roles || [],
+            },
+            authToken: user.authToken,
+          };
+        } catch (error) {
+          console.error("JWT decode error:", error);
+          return null;
+        }
       }
       return token;
     },
@@ -40,8 +59,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       const isTokenValid = getIsTokenValid(authToken);
       if (!isTokenValid) return null;
 
-      session.user = user;
-      session.authToken = authToken;
+      session.user = token.user;
+      session.role = token.role;
+      session.authToken = token.authToken;
       return session;
     },
   },

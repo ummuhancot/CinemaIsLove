@@ -21,7 +21,7 @@ export const getAuthHeader = async () => {
 
 const parseJWT = (token) => {
 
-  return JSON.parse(atob(token.split(".")[1]));
+  return JSON.parse(Buffer.from(token.split(".")[1], "base64").toString());
 };
 
 export const getIsTokenValid = (token) => {
