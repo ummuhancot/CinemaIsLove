@@ -40,7 +40,7 @@ export const MovieSchema = Yup.object({
 
   posterId: Yup.number().nullable(),
 
-  status: Yup.mixed().oneOf(["COMING_SOON", "ACTIVE", "INACTIVE"]),
+  status: Yup.mixed().oneOf(["COMING_SOON", "IN_THEATERS", "PRESALE", "FINISHED"]),
 
   cast: Yup.array()
     .of(Yup.string().required("Cast member cannot be empty"))

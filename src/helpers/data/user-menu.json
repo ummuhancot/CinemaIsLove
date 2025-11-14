@@ -11,7 +11,7 @@
     { "title": "Cities ", "link": "/dashboard/cities" },
     { "title": "Halls ", "link": "/dashboard/halls" },
     { "title": "Seats ", "link": "/dashboard/seats" },
-    { "title": "image ", "link": "/dashboard/image" }
+    { "title": "images ", "link": "/dashboard/images" }
  
   ],
   "manager": [
