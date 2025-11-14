@@ -11,8 +11,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     Credentials({
       authorize: async (credentials) => {
         const res = await login(credentials);
-        // auth-service.js artık fetch return ediyor, res.json() yok
-        const data = res; // Doğrudan data
+        const data = res;
 
         if (!data?.authToken) return null;
 
