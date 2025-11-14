@@ -60,72 +60,72 @@ export const appConfig = {
   userRightsOnRoutes: [
     {
       urlRegex: /\/dashboard$/,
-      roles: ["Admin", "Manager", "Customer"],
+      roles: ["admin", "manager", "customer"],
     },
-    { urlRegex: /\/dashboard\/admin$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/admin\/new$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/admin\/\d+$/, roles: ["ADMIN"] },
+    { urlRegex: /\/dashboard\/admin$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/admin\/new$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/admin\/\d+$/, roles: ["admin"] },
 
-    { urlRegex: /\/dashboard\/manager$/, roles: ["Admin", "Manager"] },
-    { urlRegex: /\/dashboard\/manager\/new$/, roles: ["Admin", "Manager"] },
-    { urlRegex: /\/dashboard\/manager\/\d+$/, roles: ["Admin", "Manager"] },
-    
+    { urlRegex: /\/dashboard\/manager$/, roles: ["admin", "manager"] },
+    { urlRegex: /\/dashboard\/manager\/new$/, roles: ["admin", "manager"] },
+    { urlRegex: /\/dashboard\/manager\/\d+$/, roles: ["admin", "manager"] },
+
     {
       urlRegex: /\/dashboard\/customer$/,
-      roles: ["Admin", "Manager", "Customer"],
+      roles: ["admin", "manager", "customer"],
     },
     {
       urlRegex: /\/dashboard\/customer\/new$/,
-      roles: ["Admin", "Manager", "Customer"],
+      roles: ["admin", "manager", "customer"],
     },
     {
       urlRegex: /\/dashboard\/customer\/\d+$/,
-      roles: ["Admin", "Manager", "Customer"],
+      roles: ["admin", "manager", "customer"],
     },
 
-    { urlRegex: /\/dashboard\/cinemas$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/cinemas\/new$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/cinemas\/\d+$/, roles: ["ADMIN"] },
+    { urlRegex: /\/dashboard\/cinemas$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/cinemas\/new$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/cinemas\/\d+$/, roles: ["admin"] },
 
-    { urlRegex: /\/dashboard\/cities$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/cities\/new$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/cities\/\d+$/, roles: ["ADMIN"] },
+    { urlRegex: /\/dashboard\/cities$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/cities\/new$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/cities\/\d+$/, roles: ["admin"] },
 
     {
       urlRegex: /\/dashboard\/favorites$/,
-      roles: ["Admin", "Manager", "Customer"],
+      roles: ["admin", "manager", "customer"],
     },
     {
       urlRegex: /\/dashboard\/favorites\/new$/,
-      roles: ["Admin", "Manager", "Customer"],
+      roles: ["admin", "manager", "customer"],
     },
     {
       urlRegex: /\/dashboard\/favorites\/\d+$/,
-      roles: ["Admin", "Manager", "Customer"],
+      roles: ["admin", "manager", "customer"],
     },
 
-    { urlRegex: /\/dashboard\/halls$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/halls\/new$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/halls\/\d+$/, roles: ["ADMIN"] },
+    { urlRegex: /\/dashboard\/halls$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/halls\/new$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/halls\/\d+$/, roles: ["admin"] },
 
-    { urlRegex: /\/dashboard\/image$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/image\/new$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/image\/\d+$/, roles: ["ADMIN"] },
+    { urlRegex: /\/dashboard\/image$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/image\/new$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/image\/\d+$/, roles: ["admin"] },
 
-    { urlRegex: /\/dashboard\/movies$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/movies\/new$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/movies\/\d+$/, roles: ["ADMIN"] },
+    { urlRegex: /\/dashboard\/movies$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/movies\/new$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/movies\/\d+$/, roles: ["admin"] },
 
-    { urlRegex: /\/dashboard\/payments$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/payments\/new$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/payments\/\d+$/, roles: ["ADMIN"] },
+    { urlRegex: /\/dashboard\/payments$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/payments\/new$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/payments\/\d+$/, roles: ["admin"] },
 
-    { urlRegex: /\/dashboard\/showtime$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/showtime\/new$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/showtime\/\d+$/, roles: ["ADMIN"] },
+    { urlRegex: /\/dashboard\/showtime$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/showtime\/new$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/showtime\/\d+$/, roles: ["admin"] },
 
-    { urlRegex: /\/dashboard\/tickets$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/tickets\/new$/, roles: ["ADMIN"] },
-    { urlRegex: /\/dashboard\/tickets\/\d+$/, roles: ["ADMIN"] },
+    { urlRegex: /\/dashboard\/tickets$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/tickets\/new$/, roles: ["admin"] },
+    { urlRegex: /\/dashboard\/tickets\/\d+$/, roles: ["admin"] },
   ],
 };

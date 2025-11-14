@@ -1,13 +1,14 @@
 import Link from "next/link";
-import userMenuData from "@/helpers/data/user-menu.json";
+import userMenuData from "../../../helpers/data/user-menu.json";
 import { UserMenu } from "./UserMenu";
 import { auth } from "../../../../auth";
 
 export const AuthMenu = async () => {
   const session = await auth();
 
-  const role = session?.user?.role;
-  const userMenu = role ? userMenuData[role?.toLowerCase()] : null;
+  const role = session?.user?.roles?.[0]?.authority;
+  const roleKey = role?.toLowerCase?.();
+  const userMenu = userMenuData[roleKey] || userMenuData[role] || [];
 
   return (
     <>
