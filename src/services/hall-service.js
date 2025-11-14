@@ -1,8 +1,8 @@
-import { MOVİE_CREATE_API } from "@/helpers/api-routes";
+import { HALL_CREATE_API } from "@/helpers/api-routes";
 import { getAuthHeader } from "@/helpers/auth-helpers";
 
-export const createMovies = async (payload) => {
-  return fetch(`${MOVİE_CREATE_API}`, {
+export const createHall = async (payload) => {
+  return fetch(`${HALL_CREATE_API}`, {
     method: "POST",
     headers: await getAuthHeader(),
     body: JSON.stringify(payload),

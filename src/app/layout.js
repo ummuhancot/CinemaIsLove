@@ -1,6 +1,6 @@
+import { appConfig } from "@/helpers/config";
 import "@/styles/index.scss"; 
-import "@/styles/global.scss";
-import { appConfig } from "@/helpers/config"; 
+import "@/styles/global.scss"; 
 import { Topbar } from "@/components/common/header/Topbar"; 
 import { MainMenuBar } from "@/components/common/header/MainMenuBar";
 import { Footer } from "@/components/common/footer/footer";

@@ -52,15 +52,52 @@ const MovieForm = () => {
     setFormValues((s) => ({ ...s, [name]: numeric }));
   };
 
-  // With server action we submit the form using `action={formAction}` below.
-  // Server action `movieAction` will receive FormData and handle validation and creation.
+  // Keep form values on error - don't reset form state
+  // Form values are preserved in controlled component state
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+
+    // Add all form values to FormData
+    Object.keys(formValues).forEach((key) => {
+      // Skip slug - backend generates it automatically
+      if (key === "slug") return;
+
+      // Skip showTime fields - not part of MovieRequest
+      if (
+        key === "showDate" ||
+        key === "startTime" ||
+        key === "endTime" ||
+        key === "showHallId"
+      )
+        return;
+
+      const value = formValues[key];
+      if (value !== null && value !== undefined && value !== "") {
+        if (Array.isArray(value)) {
+          value.forEach((item) => formData.append(key, item));
+        } else {
+          formData.append(key, value);
+        }
+      }
+    });
+
+    // Don't send slug - backend generates it from cinema + hall + title
+    // Don't send posterId if it's 0 (backend expects null)
+    if (formValues.posterId === 0) {
+      formData.delete("posterId");
+    }
+
+    formAction(formData);
+  };
 
   return (
     <div className="movie-form">
       <Card shadow="sm" padding="lg" radius="md" withBorder>
         <h3 className="m-1 text-center">Create Movie</h3>
 
-        <form action={formAction}>
+        <form onSubmit={handleSubmit}>
           <TextInputSelect
             name="title"
             label="Title"
@@ -275,11 +312,15 @@ const MovieForm = () => {
             disabled={isPending}
             className="p-3 mt-3"
           >
-            {isPending ? "Registering..." : "Register"}
+            {isPending ? "Movieeee..." : "Movie"}
           </Button>
 
           {state?.message && (
-            <div className={`mt-3 text-${state.ok ? "success" : "danger"}`}>
+            <div
+              className={`mt-3 p-2 ${
+                state.success ? "text-success" : "text-danger"
+              }`}
+            >
               {state.message}
             </div>
           )}

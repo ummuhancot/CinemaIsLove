@@ -6,6 +6,7 @@ export const transformFormDataToJSON = (formData) =>
 export const response = (ok, message, errors) => {
   return {
     ok,
+    success: ok, // Add success for compatibility
     message,
     errors,
     responseId: Math.random(),

@@ -59,7 +59,7 @@ const CinemaForm = () => {
             disabled={isPending}
             className="w-100 p-3 mt-3"
           >
-            {isPending ? "Registering..." : "Register"}
+            {isPending ? "Cinemasss..." : "Cinemas"}
           </Button>
         </form>
       </Card>
