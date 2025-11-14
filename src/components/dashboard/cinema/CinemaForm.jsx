@@ -1,13 +1,12 @@
 "use client";
-import { cinemaAction } from '@/actions/cinema-actions';
-import { TextInputSelect } from '@/components/common/form-fields/TextInputSelect'
+import { cinemaAction } from "@/actions/cinema-actions";
+import { TextInputSelect } from "@/components/common/form-fields/TextInputSelect";
 import { useActionState } from "react";
 import { appConfig } from "@/helpers/config";
-import { Button, Card } from 'react-bootstrap'
+import { Button, Card } from "react-bootstrap";
 
 const CinemaForm = () => {
-
-    const [state, formAction, isPending] = useActionState(cinemaAction);
+  const [state, formAction, isPending] = useActionState(cinemaAction);
   return (
     <div className="register-form">
       <Card shadow="sm" padding="lg" radius="md" withBorder>
@@ -56,12 +55,9 @@ const CinemaForm = () => {
 
           <Button
             type="submit"
-            fullWidth
-            mt="md"
-            variant="contained"
-            loading={isPending}
+            variant="danger"
             disabled={isPending}
-            className="p-3 w-full"
+            className="w-100 p-3 mt-3"
           >
             {isPending ? "Registering..." : "Register"}
           </Button>
@@ -69,6 +65,6 @@ const CinemaForm = () => {
       </Card>
     </div>
   );
-}
+};
 
-export default CinemaForm
+export default CinemaForm;
