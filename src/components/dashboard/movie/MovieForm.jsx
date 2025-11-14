@@ -94,7 +94,7 @@ const MovieForm = () => {
 
   return (
     <div className="movie-form">
-      <Card shadow="sm" padding="lg" radius="md" withBorder>
+      <Card shadow="sm" padding="lg" radius="md">
         <h3 className="m-1 text-center">Create Movie</h3>
 
         <form onSubmit={handleSubmit}>

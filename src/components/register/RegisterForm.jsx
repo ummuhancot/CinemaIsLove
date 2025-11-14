@@ -13,7 +13,7 @@ const RegisterForm = () => {
 
   return (
     <div className="register-form">
-      <Card shadow="sm" padding="lg" radius="md" withBorder>
+      <Card shadow="sm" padding="lg" radius="md">
         <h3 className="mb-3 text-center">
           Please Enter Your Registration Info
         </h3>
