@@ -8,8 +8,6 @@ import { appConfig } from "@/helpers/config";
 import { TextInputSelect } from "../common/form-fields/TextInputSelect";
 import "../register/register-form.scss";
 
-
-
 const RegisterForm = () => {
   const [state, formAction, isPending] = useActionState(registerAction);
 
@@ -58,7 +56,12 @@ const RegisterForm = () => {
             <label htmlFor="gender" className="form-label">
               Gender
             </label>
-            <select name="gender" className="form-select" defaultValue="">
+            <select
+              id="gender"
+              name="gender"
+              className="form-select"
+              defaultValue=""
+            >
               <option value="">Select Gender</option>
               {appConfig.genders.map((g) => (
                 <option key={g.value} value={g.value}>

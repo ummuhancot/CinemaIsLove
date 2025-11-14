@@ -162,6 +162,7 @@ const MovieList = () => {
               Movie Status
             </label>
             <select
+              id="status"
               name="status"
               className="form-select"
               value={formValues.status}
