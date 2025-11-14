@@ -63,7 +63,7 @@ const MovieList = () => {
 
   return (
     <div className="movie-form">
-      <Card shadow="sm" padding="lg" radius="md" withBorder>
+      <Card shadow="sm" padding="lg" radius="md">
         <h3 className="m-1 text-center">Enter Movie Info</h3>
 
         <form onSubmit={movieAction}>

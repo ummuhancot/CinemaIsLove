@@ -28,7 +28,7 @@ const ImageUploadForm = () => {
 
   return (
     <div className="image-upload-form">
-      <Card shadow="sm" padding="lg" radius="md" withBorder>
+      <Card shadow="sm" padding="lg" radius="md">
         <h3 className="m-1 text-center mb-3">Upload Movie Images</h3>
 
         <form onSubmit={handleSubmit}>
@@ -71,7 +71,9 @@ const ImageUploadForm = () => {
               </div>
             )}
             {state?.errors?.images && (
-              <div className="text-danger small mt-1">{state.errors.images}</div>
+              <div className="text-danger small mt-1">
+                {state.errors.images}
+              </div>
             )}
           </div>
 
